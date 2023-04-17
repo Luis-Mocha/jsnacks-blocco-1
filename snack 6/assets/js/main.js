@@ -82,3 +82,24 @@ console.log(newArray)
 function randomNumber(min, max) {
     return Math.floor( Math.random() * (max - min + 1) + min );        
 };
+
+
+
+// ----- Snack 3
+let arrayNomi = ['alberto', 'michele','angelo','simone', 'laura', 'francesca'];
+let min = parseInt( prompt( `Inserisci un numero compreso fra 0 e ${arrayNomi.lenght - 1}`))
+let max = parseInt( prompt( `Inserisci un numero compreso fra 0 e ${arrayNomi.lenght - 1}`))
+
+function filterFunction(array, x, y) {
+    
+    let arrayFiltrato = array.filter( (element, index)=> {
+
+        if (x < index && y > index) {
+            return element;
+        }
+    });
+
+    return arrayFiltrato;
+};
+
+console.log(filterFunction(arrayNomi, min, max))
