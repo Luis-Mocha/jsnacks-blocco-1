@@ -37,3 +37,48 @@ bici.forEach(element => {
 
 const {nomeBici, peso} = biciLeggera;
 console.log(`La bici più leggera si chiama ${nomeBici} e pesa ${peso} Kg.`)
+
+
+// ----- Snack 2
+const teams = [
+    {
+        nome: 'Nome Squadra A',
+        puntiFatti: 0,
+        falliSubiti: 0
+    }, {
+        nome: 'Nome Squadra B',
+        puntiFatti: 0,
+        falliSubiti: 0
+    }, {
+        nome: 'Nome Squadra C',
+        puntiFatti: 0,
+        falliSubiti: 0
+    }, {
+        nome: 'Nome Squadra D',
+        puntiFatti: 0,
+        falliSubiti: 0
+    }, {
+        nome: 'Nome Squadra E',
+        puntiFatti: 0,
+        falliSubiti: 0
+    }
+];
+
+
+console.log(teams)
+let newArray = [];
+
+teams.forEach( team => {
+    team.puntiFatti = randomNumber(0, 100)
+    team.falliSubiti = randomNumber(0, 100)
+    const {nome, puntiFatti, falliSubiti} = team;
+
+    newArray.push({nome, falliSubiti})
+})
+console.log(newArray)
+
+
+// ----- random number function
+function randomNumber(min, max) {
+    return Math.floor( Math.random() * (max - min + 1) + min );        
+};
